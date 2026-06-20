@@ -13,6 +13,7 @@ The pattern I keep returning to is simple: noisy inputs become visible state, vi
 | System | Shape | Notes |
 | --- | --- | --- |
 | [BulAI2](https://github.com/crubicleowner/bulbai2) | Engineering workflow cockpit | Research -> geometry/CAD -> mesh/simulation readiness -> validation/reporting. Desktop-first, artifact-driven, agent-friendly. |
+| MixApp | Commercial digital solutions | Software and business-facing digital work: corporate web presence, presentation systems, and applied IT project packaging. |
 | Konspektum | Lecture-to-study pipeline | Turns raw lecture audio or transcripts into structured study outputs: Markdown, JSON, Anki TSV, DOCX. |
 | [OneTouchVPN](https://github.com/crubicleowner/onetouchvpn) | VPN and service tooling | API/client/infrastructure experiments around networking, operational clarity, and user-facing setup flows. |
 | Signal tools | Dashboards and scanners | Python utilities for collecting signals, structuring data, and making noisy inputs easier to inspect. |
