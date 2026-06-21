@@ -35,11 +35,11 @@ async function main() {
     await page.screenshot({ path: path.join(framesDir, `frame-${padded}.png`), clip });
   }
 
-  await page.screenshot({ path: path.join(assetsDir, "profile-cover.png"), clip });
+  await page.screenshot({ path: path.join(assetsDir, "profile-cover-compact.png"), clip });
   await browser.close();
 
   console.log(`Captured ${frameCount} frames to ${framesDir}`);
-  console.log(`Wrote ${path.join(assetsDir, "profile-cover.png")}`);
+  console.log(`Wrote ${path.join(assetsDir, "profile-cover-compact.png")}`);
 }
 
 main().catch((error) => {

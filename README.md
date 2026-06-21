@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/profile-cover.gif" alt="crubicleowner engineering profile cover" width="100%" />
+  <img src="assets/profile-cover-compact.gif" alt="crubicleowner engineering profile cover" width="100%" />
 </div>
 
 ## Readable Systems. Testable Behavior. Useful Artifacts.
@@ -42,4 +42,3 @@ ai              prompt -> build -> verify -> improve
 - Treat docs, reports, and reproducible cases as part of the product.
 - Use AI where it removes repeated work, then verify the result like an engineer.
 - Prefer small systems that are easy to inspect, explain, and improve.
-

@@ -4,7 +4,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 FRAMES = Path(__file__).resolve().parent / "frames"
-OUT = ROOT / "assets" / "profile-cover.gif"
+OUT = ROOT / "assets" / "profile-cover-compact.gif"
 
 
 def main() -> None:
