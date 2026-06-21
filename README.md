@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/profile-cover-compact.gif" alt="crubicleowner engineering profile cover" width="100%" />
+  <img src="assets/profile-cover-compact.png" alt="crubicleowner engineering profile cover" width="100%" />
 </div>
 
 ## Readable Systems. Testable Behavior. Useful Artifacts.
