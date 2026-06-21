@@ -1,41 +1,45 @@
 <div align="center">
-  <img src="assets/profile-cover.gif" alt="crubicleowner profile cover" width="100%" />
+  <img src="assets/profile-cover.gif" alt="crubicleowner engineering profile cover" width="100%" />
 </div>
 
-## Applied systems over demo theater
+## Readable Systems. Testable Behavior. Useful Artifacts.
 
-I build tools that make messy work legible: AI-assisted pipelines, automation loops, desktop cockpits, backend services, and infrastructure utilities.
+I build AI-assisted tools, QA workflows, desktop control surfaces, and web systems with a practical bias: make the state visible, make behavior testable, and leave behind artifacts that another person can inspect.
 
-The pattern I keep returning to is simple: noisy inputs become visible state, visible state becomes reviewable artifacts, and the next run gets easier than the last one.
+My work is strongest where product thinking, code, documentation, and verification meet: turning unclear ideas into runnable slices, then tightening them through manual checks, test scenarios, reports, and iteration.
 
-### Selected systems
+### Selected Systems
 
-| System | Shape | Notes |
+| System | Shape | Evidence |
 | --- | --- | --- |
-| [BulAI2](https://github.com/crubicleowner/bulbai2) | Engineering workflow cockpit | Research -> geometry/CAD -> mesh/simulation readiness -> validation/reporting. Desktop-first, artifact-driven, agent-friendly. |
-| MixApp | Commercial digital solutions | Software and business-facing digital work: corporate web presence, presentation systems, and applied IT project packaging. |
-| Konspektum | Lecture-to-study pipeline | Turns raw lecture audio or transcripts into structured study outputs: Markdown, JSON, Anki TSV, DOCX. |
-| [OneTouchVPN](https://github.com/crubicleowner/onetouchvpn) | VPN and service tooling | API/client/infrastructure experiments around networking, operational clarity, and user-facing setup flows. |
-| Signal tools | Dashboards and scanners | Python utilities for collecting signals, structuring data, and making noisy inputs easier to inspect. |
+| [BulbOpt Desktop](https://github.com/crubicleowner/bulbai2) | Engineering workflow cockpit | Python project structure, pytest checks, docs, local worker concepts, report-oriented vertical slice. |
+| MixApp | Full-cycle digital/web project | Web presence, offer structure, content packaging, manual UI checks, DevTools-driven review. |
+| [OneTouchVPN](https://github.com/crubicleowner/onetouchvpn) | VPN/service tooling prototype | User-facing setup flow, interface prototype, networking/service-oriented experiments. |
+| Signal tools | Data and automation utilities | Small Python workflows for collecting, shaping, and inspecting noisy inputs. |
 
-### Working range
+### Proof Of Work
+
+- **Testing mindset:** functional checks, smoke/regression flows, exploratory review, reproducible cases, bug-report thinking.
+- **Technical QA range:** DevTools, SQL basics, Docker exposure, Playwright-oriented scenarios, pytest-based checks.
+- **Artifact discipline:** README files, project docs, setup notes, test outputs, reports, and clear handoff material.
+- **AI-assisted delivery:** AI is used for acceleration, but the output is reviewed, debugged, structured, and owned.
+
+### Working Range
 
 ```txt
-interfaces     React / Electron / Vite / compact operational UI
-automation     Python / TypeScript / async workers / reporting
-services       FastAPI / Flask / Node / Go
-systems        Docker / GitHub workflows / local-first tooling
-ai             agent workflows / provider integrations / structured outputs
+qa              manual testing / smoke / regression / exploratory / bug reports
+automation      Python / pytest / Playwright-oriented scenarios / repeatable checks
+interfaces      HTML / CSS / Flutter exposure / compact product UI
+systems         Git / GitHub / Docker exposure / local-first workflows
+data            SQL basics / JSON / HTTP concepts / reportable state
+ai              prompt -> build -> verify -> improve
 ```
 
-### Build bias
+### Operating Principles
 
 - Start with a vertical slice that can actually run.
 - Make state visible before making the system clever.
-- Keep artifacts inspectable and handoffs explicit.
-- Use agents and automation where they remove real repeated work.
-- Prefer quiet tools that survive contact with reality.
+- Treat docs, reports, and reproducible cases as part of the product.
+- Use AI where it removes repeated work, then verify the result like an engineer.
+- Prefer small systems that are easy to inspect, explain, and improve.
 
-### Current interests
-
-Applied AI workflows, desktop control surfaces, automation infrastructure, and small systems that connect research, code, data, and UI without turning into a circus.
