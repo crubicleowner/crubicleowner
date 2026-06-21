@@ -15,7 +15,7 @@ async function main() {
 
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({
-    viewport: { width: 1200, height: 500 },
+    viewport: { width: 1200, height: 720 },
     deviceScaleFactor: 1,
   });
 
@@ -23,8 +23,8 @@ async function main() {
   await page.waitForSelector(".cover");
   await page.waitForTimeout(250);
 
-  const clip = { x: 0, y: 0, width: 1200, height: 500 };
-  const frameCount = 40;
+  const clip = { x: 0, y: 0, width: 1200, height: 720 };
+  const frameCount = 32;
   const frameDelayMs = 100;
 
   for (let index = 0; index < frameCount; index += 1) {

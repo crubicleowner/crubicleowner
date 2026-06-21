@@ -15,7 +15,7 @@ def main() -> None:
     frames = []
     for path in paths:
         image = Image.open(path).convert("RGBA")
-        palette = image.convert("P", palette=Image.Palette.ADAPTIVE, colors=96)
+        palette = image.convert("P", palette=Image.Palette.ADAPTIVE, colors=72)
         frames.append(palette)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

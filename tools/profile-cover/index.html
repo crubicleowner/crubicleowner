@@ -10,14 +10,15 @@
       --cyan: #22d3ee;
       --blue: #38bdf8;
       --green: #22c55e;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --soft: #94a3b8;
     }
     * { box-sizing: border-box; }
     html, body {
       margin: 0;
       width: 1200px;
-      height: 500px;
+      height: 720px;
       overflow: hidden;
       background: var(--bg);
       color: var(--text);
@@ -26,12 +27,12 @@
     .cover {
       position: relative;
       width: 1200px;
-      height: 500px;
+      height: 720px;
       overflow: hidden;
       background:
-        radial-gradient(circle at 18% 12%, rgba(14, 165, 233, 0.24), transparent 29%),
-        radial-gradient(circle at 82% 10%, rgba(34, 197, 94, 0.13), transparent 30%),
-        radial-gradient(circle at 48% 100%, rgba(59, 130, 246, 0.16), transparent 42%),
+        radial-gradient(circle at 16% 8%, rgba(34, 211, 238, 0.28), transparent 30%),
+        radial-gradient(circle at 86% 18%, rgba(34, 197, 94, 0.18), transparent 32%),
+        radial-gradient(circle at 48% 100%, rgba(59, 130, 246, 0.18), transparent 40%),
         var(--bg);
       isolation: isolate;
     }
@@ -42,276 +43,187 @@
       height: 100%;
       z-index: 0;
     }
-    .scanlines {
+    .texture {
       position: absolute;
       inset: 0;
       z-index: 1;
       pointer-events: none;
       background:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,0.05), transparent 30%, transparent 70%, rgba(34,197,94,0.06));
-      background-size: 100% 4px, 100% 100%;
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.06), transparent 32%, transparent 70%, rgba(34,197,94,0.07));
+      background-size: 100% 5px, 100% 100%;
+      opacity: 0.46;
       mix-blend-mode: screen;
-      opacity: 0.5;
-      animation: scan 7s linear infinite;
+      animation: scan 8s linear infinite;
     }
     @keyframes scan {
-      0% { transform: translateY(-12px); }
-      100% { transform: translateY(12px); }
+      0% { transform: translateY(-14px); }
+      100% { transform: translateY(14px); }
     }
     .content {
       position: relative;
       z-index: 2;
-      width: 100%;
       height: 100%;
-      display: grid;
-      grid-template-columns: 0.96fr 1.04fr;
-      gap: 20px;
-      padding: 28px 34px;
-      background:
-        linear-gradient(90deg, rgba(2,6,23,0.97), rgba(2,6,23,0.78) 43%, rgba(2,6,23,0.28)),
-        linear-gradient(180deg, rgba(2,6,23,0.12), rgba(2,6,23,0.86));
-    }
-    .identity {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-width: 0;
-    }
-    .kicker {
-      color: var(--cyan);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .codename {
-      margin: 0;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 70px;
-      line-height: 0.9;
-      letter-spacing: -0.055em;
-      color: #f8fafc;
-      text-shadow: 0 0 22px rgba(34, 211, 238, 0.24);
-    }
-    .role {
-      margin: 14px 0 0;
-      max-width: 560px;
-      color: #cbd5e1;
-      font-size: 15px;
-      line-height: 1.42;
-    }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 16px;
-    }
-    .chip {
-      color: #dbeafe;
-      border: 1px solid rgba(147, 197, 253, 0.32);
-      background: rgba(15, 23, 42, 0.72);
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 11px;
-      backdrop-filter: blur(8px);
-    }
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 13px;
-    }
-    .proof {
-      border: 1px solid rgba(125, 211, 252, 0.22);
-      background: rgba(2, 6, 23, 0.58);
-      border-radius: 11px;
-      padding: 10px;
-      min-height: 66px;
-    }
-    .proof span {
-      display: block;
-      color: var(--cyan);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 9px;
-      margin-bottom: 5px;
-    }
-    .proof strong {
-      display: block;
-      color: #f8fafc;
-      font-size: 12px;
-      margin-bottom: 3px;
-    }
-    .proof p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 10px;
-      line-height: 1.28;
-    }
-    .right-panel {
+      padding: 58px 64px;
       display: grid;
       grid-template-rows: auto 1fr auto;
-      gap: 10px;
-      min-width: 0;
+      gap: 28px;
+      background:
+        linear-gradient(90deg, rgba(2,6,23,0.98), rgba(2,6,23,0.76) 45%, rgba(2,6,23,0.32)),
+        linear-gradient(180deg, rgba(2,6,23,0.05), rgba(2,6,23,0.88));
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    .kicker {
+      margin-bottom: 18px;
+      color: var(--cyan);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 18px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .handle {
+      margin: 0;
+      max-width: 720px;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 122px;
+      line-height: 0.88;
+      letter-spacing: -0.075em;
+      text-shadow: 0 0 28px rgba(34, 211, 238, 0.22);
     }
     .terminal {
-      border: 1px solid rgba(34, 197, 94, 0.3);
+      width: 442px;
+      border: 1px solid rgba(34, 197, 94, 0.34);
       background: rgba(2, 6, 23, 0.82);
-      border-radius: 14px;
-      padding: 13px 14px;
+      border-radius: 22px;
+      padding: 22px 24px;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      box-shadow: inset 0 0 42px rgba(22, 163, 74, 0.12);
+      box-shadow: inset 0 0 54px rgba(22, 163, 74, 0.12);
     }
     .bar {
       display: flex;
-      gap: 6px;
-      margin-bottom: 10px;
+      gap: 8px;
+      margin-bottom: 18px;
     }
     .dot {
-      width: 9px;
-      height: 9px;
+      width: 13px;
+      height: 13px;
       border-radius: 999px;
       background: #ef4444;
     }
     .dot:nth-child(2) { background: #f59e0b; }
     .dot:nth-child(3) { background: #22c55e; }
     .line {
-      font-size: 11px;
-      line-height: 1.55;
       color: #bbf7d0;
+      font-size: 22px;
+      line-height: 1.45;
       white-space: nowrap;
     }
     .muted { color: #64748b; }
-    .run { color: #38bdf8; }
     .ok { color: #22c55e; }
-    .timeline {
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      background: rgba(15, 23, 42, 0.58);
-      border-radius: 14px;
-      padding: 12px;
+    .run { color: var(--blue); }
+    .middle {
+      align-self: end;
+    }
+    .role {
+      max-width: 900px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 31px;
+      line-height: 1.3;
+      font-weight: 560;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .chip {
+      color: #dbeafe;
+      border: 1px solid rgba(147, 197, 253, 0.34);
+      background: rgba(15, 23, 42, 0.75);
+      border-radius: 999px;
+      padding: 13px 17px;
+      font-size: 22px;
+      backdrop-filter: blur(8px);
+    }
+    .proof-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-      align-content: center;
+      gap: 16px;
     }
-    .stage {
-      position: relative;
-      border-radius: 11px;
-      padding: 10px 9px 17px;
-      background: rgba(2, 6, 23, 0.62);
-      border: 1px solid rgba(125, 211, 252, 0.18);
-      min-height: 88px;
+    .proof {
+      min-height: 118px;
+      border: 1px solid rgba(125, 211, 252, 0.26);
+      background: rgba(2, 6, 23, 0.64);
+      border-radius: 20px;
+      padding: 20px;
     }
-    .stage::after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 9px;
-      height: 3px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--cyan), var(--green));
-      transform-origin: left;
-      transform: scaleX(0);
-      opacity: 0.92;
-      animation: fillbar 1.25s cubic-bezier(.22, 1, .36, 1) forwards;
-    }
-    .stage:nth-child(2)::after { animation-delay: .28s; }
-    .stage:nth-child(3)::after { animation-delay: .56s; }
-    .stage:nth-child(4)::after { animation-delay: .84s; }
-    @keyframes fillbar {
-      0% { transform: scaleX(0); opacity: 0.36; }
-      72% { transform: scaleX(1.04); opacity: 1; }
-      100% { transform: scaleX(1); opacity: 0.92; }
-    }
-    .stage small {
+    .proof span {
       display: block;
+      margin-bottom: 10px;
       color: var(--cyan);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      margin-bottom: 6px;
-      font-size: 10px;
+      font-size: 18px;
     }
-    .stage strong {
+    .proof strong {
       display: block;
-      margin-bottom: 4px;
-      color: #f8fafc;
-      font-size: 12px;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.05;
+      margin-bottom: 8px;
     }
-    .stage p {
+    .proof p {
       margin: 0;
-      color: var(--muted);
-      font-size: 9px;
-      line-height: 1.28;
-    }
-    .footer-strip {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    .status {
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      color: #dcfce7;
-      background: rgba(20, 83, 45, 0.22);
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 11px;
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.25;
     }
   </style>
 </head>
 <body>
   <div class="cover">
     <canvas id="scene"></canvas>
-    <div class="scanlines"></div>
+    <div class="texture"></div>
     <div class="content">
-      <section class="identity">
+      <section class="top">
         <div>
-          <div class="kicker">public engineering profile / handle-only identity</div>
-          <h1 class="codename">crubicle<br />owner</h1>
-          <p class="role">AI-assisted QA and systems builder. Turning unclear ideas into runnable slices, visible state, testable behavior, docs, reports, and reproducible cases.</p>
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">pytest</span>
-            <span class="chip">DevTools</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Playwright</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">AI-assisted QA</span>
-          </div>
+          <div class="kicker">public engineering profile</div>
+          <h1 class="handle">crubicle<br />owner</h1>
         </div>
-        <div class="proof-grid">
-          <div class="proof"><span>01 / test signal</span><strong>Manual + automated checks</strong><p>Smoke, regression, exploratory, pytest, Playwright-ready thinking.</p></div>
-          <div class="proof"><span>02 / artifacts</span><strong>Docs and reports</strong><p>README, checklists, bug reports, reproducible cases.</p></div>
-          <div class="proof"><span>03 / systems</span><strong>BulbOpt + MixApp</strong><p>Engineering workflow cockpit and full-cycle web/digital project.</p></div>
-          <div class="proof"><span>04 / workflow</span><strong>Prompt to verification</strong><p>Uses AI heavily, but owns review, debugging, structure, and quality.</p></div>
+
+        <aside class="terminal">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="line"><span class="muted">$</span> whoami</div>
+          <div class="line"><span class="ok">QA</span> + systems</div>
+          <div class="line"><span class="run">Python</span> / pytest</div>
+          <div class="line"><span class="run">Docs</span> / reports</div>
+        </aside>
+      </section>
+
+      <section class="middle">
+        <p class="role">AI-assisted QA and systems builder. Turning unclear ideas into runnable slices, visible state, testable behavior, docs, reports, and reproducible cases.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">pytest</span>
+          <span class="chip">DevTools</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Playwright</span>
+          <span class="chip">GitHub</span>
         </div>
       </section>
 
-      <section class="right-panel">
-        <div class="terminal">
-          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-          <div class="line"><span class="muted">$</span> whoami --public</div>
-          <div class="line"><span class="ok">ID</span> crubicleowner / AI-assisted QA & systems builder</div>
-          <div class="line"><span class="ok">FOCUS</span> web QA, desktop workflows, testable product slices</div>
-          <div class="line"><span class="run">PROJECTS</span> BulbOpt Desktop / MixApp / OneTouchVPN</div>
-          <div class="line"><span class="run">VERIFY</span> requirements -> scenarios -> defects -> reports</div>
-          <div class="line"><span class="ok">STACK</span> Python, pytest, DevTools, SQL, Docker, Playwright</div>
-          <div class="line"><span class="muted">OUTPUT</span> docs, reports, reproducible cases, working prototypes</div>
-        </div>
-
-        <div class="timeline">
-          <div class="stage"><small>input</small><strong>Requirements</strong><p>Turn vague ideas into testable states and acceptance checks.</p></div>
-          <div class="stage"><small>build</small><strong>Vertical slice</strong><p>Runnable first, then better: UI, automation, docs.</p></div>
-          <div class="stage"><small>verify</small><strong>QA loop</strong><p>Manual checks, DevTools, SQL, Docker, Playwright scenarios.</p></div>
-          <div class="stage"><small>ship</small><strong>Artifacts</strong><p>README, reports, bug notes, reproducible setup.</p></div>
-        </div>
-
-        <div class="footer-strip">
-          <span class="status">status: building public proof</span>
-          <span class="status">target: junior QA / technical QA</span>
-        </div>
+      <section class="proof-grid">
+        <div class="proof"><span>01</span><strong>Manual QA</strong><p>smoke, regression, exploratory</p></div>
+        <div class="proof"><span>02</span><strong>Automation</strong><p>pytest and Playwright-oriented checks</p></div>
+        <div class="proof"><span>03</span><strong>Systems</strong><p>BulbOpt Desktop, MixApp, OneTouchVPN</p></div>
+        <div class="proof"><span>04</span><strong>Artifacts</strong><p>README, docs, reports, reproducible cases</p></div>
       </section>
     </div>
   </div>
@@ -323,8 +235,7 @@
     let H = 0;
     const nodes = [];
     const shards = [];
-    const rings = [];
-    const code = ["build", "test", "docs", "ship", "trace", "qa", "sql", "docker", "pytest", "playwright", "devtools"];
+    const code = ["build", "test", "docs", "ship", "qa", "sql", "docker", "pytest", "playwright", "devtools"];
 
     function seededRandom(seed) {
       let value = seed % 2147483647;
@@ -345,35 +256,25 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       nodes.length = 0;
       shards.length = 0;
-      rings.length = 0;
-      for (let i = 0; i < 82; i++) {
+      for (let i = 0; i < 74; i++) {
         nodes.push({
           x: random() * W,
           y: random() * H,
           z: random(),
-          vx: (random() - 0.5) * 0.55,
-          vy: (random() - 0.5) * 0.55,
-          r: 0.9 + random() * 2.4,
+          vx: (random() - 0.5) * 0.6,
+          vy: (random() - 0.5) * 0.6,
+          r: 1.1 + random() * 2.7,
           hue: random() > 0.62 ? "green" : "cyan"
         });
       }
-      for (let i = 0; i < 38; i++) {
+      for (let i = 0; i < 34; i++) {
         shards.push({
           x: random() * W,
           y: random() * H,
-          len: 28 + random() * 100,
-          speed: 0.7 + random() * 1.8,
+          len: 36 + random() * 130,
+          speed: 0.8 + random() * 2.1,
           alpha: 0.05 + random() * 0.17,
-          tilt: -0.45 + random() * 0.9
-        });
-      }
-      for (let i = 0; i < 6; i++) {
-        rings.push({
-          x: W * (0.52 + random() * 0.4),
-          y: H * (0.15 + random() * 0.62),
-          r: 20 + random() * 80,
-          speed: 0.4 + random() * 0.8,
-          alpha: 0.1 + random() * 0.14
+          tilt: -0.35 + random() * 0.7
         });
       }
     }
@@ -381,18 +282,18 @@
     function background(t) {
       const g = ctx.createLinearGradient(0, 0, W, H);
       g.addColorStop(0, "#020617");
-      g.addColorStop(0.52, "#07111f");
+      g.addColorStop(0.54, "#07111f");
       g.addColorStop(1, "#020617");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, W, H);
 
-      const glow1 = ctx.createRadialGradient(W * 0.72, H * 0.38, 0, W * 0.72, H * 0.38, W * 0.46);
+      const glow1 = ctx.createRadialGradient(W * 0.76, H * 0.34, 0, W * 0.76, H * 0.34, W * 0.48);
       glow1.addColorStop(0, `rgba(34,211,238,${0.18 + Math.sin(t * 0.0014) * 0.05})`);
       glow1.addColorStop(1, "rgba(34,211,238,0)");
       ctx.fillStyle = glow1;
       ctx.fillRect(0, 0, W, H);
 
-      const glow2 = ctx.createRadialGradient(W * 0.88, H * 0.72, 0, W * 0.88, H * 0.72, W * 0.34);
+      const glow2 = ctx.createRadialGradient(W * 0.86, H * 0.76, 0, W * 0.86, H * 0.76, W * 0.36);
       glow2.addColorStop(0, "rgba(34,197,94,0.16)");
       glow2.addColorStop(1, "rgba(34,197,94,0)");
       ctx.fillStyle = glow2;
@@ -401,25 +302,25 @@
 
     function drawPerspectiveGrid(t) {
       ctx.save();
-      ctx.translate(W * 0.56, H * 0.58);
-      ctx.rotate(-0.18);
-      ctx.strokeStyle = "rgba(56,189,248,0.16)";
+      ctx.translate(W * 0.62, H * 0.58);
+      ctx.rotate(-0.17);
+      ctx.strokeStyle = "rgba(56,189,248,0.15)";
       ctx.lineWidth = 1;
-      const horizon = -H * 0.24;
-      const bottom = H * 0.55;
-      const offset = (t * 0.03) % 42;
-      for (let i = -13; i <= 13; i++) {
+      const horizon = -H * 0.22;
+      const bottom = H * 0.58;
+      const offset = (t * 0.03) % 48;
+      for (let i = -14; i <= 14; i++) {
         ctx.beginPath();
-        ctx.moveTo(i * 46, bottom);
-        ctx.lineTo(i * 10, horizon);
+        ctx.moveTo(i * 54, bottom);
+        ctx.lineTo(i * 11, horizon);
         ctx.stroke();
       }
-      for (let y = horizon + offset; y < bottom; y += 42) {
+      for (let y = horizon + offset; y < bottom; y += 48) {
         const scale = (y - horizon) / (bottom - horizon);
-        ctx.globalAlpha = 0.06 + scale * 0.28;
+        ctx.globalAlpha = 0.05 + scale * 0.26;
         ctx.beginPath();
-        ctx.moveTo(-W * 0.5 * scale, y);
-        ctx.lineTo(W * 0.62 * scale, y);
+        ctx.moveTo(-W * 0.52 * scale, y);
+        ctx.lineTo(W * 0.64 * scale, y);
         ctx.stroke();
       }
       ctx.restore();
@@ -430,10 +331,10 @@
       ctx.save();
       ctx.lineWidth = 1;
       for (const s of shards) {
-        s.x -= s.speed * 1.3;
-        s.y += s.speed * 0.18;
-        if (s.x < -140) {
-          s.x = W + 120;
+        s.x -= s.speed * 1.25;
+        s.y += s.speed * 0.16;
+        if (s.x < -170) {
+          s.x = W + 150;
           s.y = random() * H;
         }
         ctx.globalAlpha = s.alpha;
@@ -447,30 +348,14 @@
       ctx.globalAlpha = 1;
     }
 
-    function drawRings(t) {
-      ctx.save();
-      for (const r of rings) {
-        r.r += r.speed;
-        if (r.r > 185) r.r = 22;
-        ctx.globalAlpha = Math.max(0, r.alpha * (1 - r.r / 205));
-        ctx.strokeStyle = r.r % 2 > 1 ? "#22d3ee" : "#22c55e";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.ellipse(r.x, r.y, r.r * 1.5, r.r * 0.52, -0.22 + Math.sin(t * 0.0008) * 0.1, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-      ctx.restore();
-      ctx.globalAlpha = 1;
-    }
-
     function drawNetwork() {
       for (const n of nodes) {
         n.x += n.vx * (0.6 + n.z);
         n.y += n.vy * (0.6 + n.z);
-        if (n.x < -40) n.x = W + 40;
-        if (n.x > W + 40) n.x = -40;
-        if (n.y < -40) n.y = H + 40;
-        if (n.y > H + 40) n.y = -40;
+        if (n.x < -50) n.x = W + 50;
+        if (n.x > W + 50) n.x = -50;
+        if (n.y < -50) n.y = H + 50;
+        if (n.y > H + 50) n.y = -50;
       }
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
@@ -479,8 +364,8 @@
           const dx = a.x - b.x;
           const dy = a.y - b.y;
           const d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 120) {
-            ctx.globalAlpha = (1 - d / 120) * 0.32;
+          if (d < 138) {
+            ctx.globalAlpha = (1 - d / 138) * 0.3;
             ctx.strokeStyle = a.hue === "green" || b.hue === "green" ? "#22c55e" : "#22d3ee";
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -504,12 +389,12 @@
 
     function drawCodeRain(t) {
       ctx.save();
-      ctx.font = "10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
-      for (let i = 0; i < 28; i++) {
-        const x = W * 0.52 + ((i * 73 + t * 0.025) % (W * 0.5));
-        const y = (i * 37 + t * 0.045) % H;
+      ctx.font = "18px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+      for (let i = 0; i < 24; i++) {
+        const x = W * 0.54 + ((i * 94 + t * 0.025) % (W * 0.5));
+        const y = (i * 51 + t * 0.045) % H;
         const word = code[i % code.length];
-        ctx.globalAlpha = 0.08 + (i % 5) * 0.025;
+        ctx.globalAlpha = 0.07 + (i % 5) * 0.018;
         ctx.fillStyle = i % 3 === 0 ? "#22c55e" : "#38bdf8";
         ctx.fillText(word, x, y);
       }
@@ -521,7 +406,6 @@
       background(t);
       drawPerspectiveGrid(t);
       drawShards();
-      drawRings(t);
       drawNetwork();
       drawCodeRain(t);
       requestAnimationFrame(loop);
