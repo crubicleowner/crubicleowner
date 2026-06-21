@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">crubicleowner engineering profile cover</title>
+  <desc id="desc">Animated engineering profile cover for crubicleowner with QA, automation, systems, and artifacts proof blocks.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.55" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="72%" cy="28%" r="58%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".23"/>
+      <stop offset=".55" stop-color="#22d3ee" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="86%" cy="76%" r="44%">
+      <stop offset="0" stop-color="#22c55e" stop-opacity=".18"/>
+      <stop offset=".55" stop-color="#22c55e" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scan" width="1200" height="8" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="1" fill="#ffffff" opacity=".055"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .muted { fill: #cbd5e1; }
+      .soft { fill: #94a3b8; }
+      .cyan { fill: #22d3ee; }
+      .green { fill: #22c55e; }
+      .blue { fill: #38bdf8; }
+      .terminal-text { font-size: 22px; font-weight: 700; }
+      .chip-text { font-size: 22px; font-weight: 650; }
+      .proof-title { font-size: 25px; font-weight: 800; }
+      .proof-copy { font-size: 18px; font-weight: 550; }
+      .grid-lines {
+        animation: driftGrid 9s linear infinite;
+        transform-origin: 700px 360px;
+      }
+      .scanlines {
+        animation: scanMove 7s linear infinite;
+        mix-blend-mode: screen;
+      }
+      .node { filter: url(#softGlow); }
+      .node-a { animation: floatA 6s ease-in-out infinite alternate; }
+      .node-b { animation: floatB 7s ease-in-out infinite alternate; }
+      .node-c { animation: floatC 8s ease-in-out infinite alternate; }
+      .pulse { animation: pulse 3.2s ease-in-out infinite; transform-origin: center; }
+      .cursor { animation: blink 1.15s steps(1) infinite; }
+      .bar-fill { transform-box: fill-box; transform-origin: left center; animation: fillOnce 1.25s cubic-bezier(.22,1,.36,1) forwards; }
+      .delay-1 { animation-delay: .16s; }
+      .delay-2 { animation-delay: .32s; }
+      .delay-3 { animation-delay: .48s; }
+      @keyframes driftGrid {
+        0% { transform: translate(0, 0) rotate(-8deg); opacity: .58; }
+        50% { transform: translate(-26px, 16px) rotate(-8deg); opacity: .82; }
+        100% { transform: translate(-52px, 32px) rotate(-8deg); opacity: .58; }
+      }
+      @keyframes scanMove {
+        0% { transform: translateY(-12px); opacity: .36; }
+        100% { transform: translateY(12px); opacity: .52; }
+      }
+      @keyframes floatA {
+        from { transform: translate(0, 0); }
+        to { transform: translate(18px, -22px); }
+      }
+      @keyframes floatB {
+        from { transform: translate(0, 0); }
+        to { transform: translate(-20px, 18px); }
+      }
+      @keyframes floatC {
+        from { transform: translate(0, 0); }
+        to { transform: translate(26px, 12px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: .42; }
+        50% { opacity: .95; }
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes fillOnce {
+        0% { transform: scaleX(0); opacity: .35; }
+        72% { transform: scaleX(1.04); opacity: 1; }
+        100% { transform: scaleX(1); opacity: .95; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <rect width="1200" height="720" fill="url(#cyanGlow)">
+    <animate attributeName="opacity" values=".75;1;.75" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="1200" height="720" fill="url(#greenGlow)">
+    <animate attributeName="opacity" values=".65;.95;.65" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <g class="grid-lines" opacity=".34" stroke="#38bdf8" stroke-width="1">
+    <path d="M640 -40 L1020 760 M690 -40 L1060 760 M740 -40 L1100 760 M790 -40 L1140 760 M840 -40 L1180 760 M890 -40 L1220 760"/>
+    <path d="M520 130 H1250 M500 190 H1250 M480 250 H1250 M460 310 H1250 M440 370 H1250 M420 430 H1250 M400 490 H1250"/>
+  </g>
+
+  <g opacity=".24" stroke-width="1">
+    <path d="M444 66 L520 130 L610 104 L728 156 L826 98 L1010 160" stroke="#22d3ee"/>
+    <path d="M405 258 L506 212 L620 282 L752 244 L910 320 L1084 272" stroke="#22c55e"/>
+    <path d="M575 456 L690 398 L804 444 L940 402 L1098 480" stroke="#38bdf8"/>
+  </g>
+
+  <g class="node node-a">
+    <circle cx="520" cy="130" r="7" fill="#22d3ee" opacity=".65"/>
+    <circle cx="728" cy="156" r="5" fill="#22c55e" opacity=".55"/>
+    <circle cx="1010" cy="160" r="6" fill="#22d3ee" opacity=".5"/>
+  </g>
+  <g class="node node-b">
+    <circle cx="506" cy="212" r="4" fill="#22c55e" opacity=".62"/>
+    <circle cx="752" cy="244" r="5" fill="#22d3ee" opacity=".58"/>
+    <circle cx="1084" cy="272" r="7" fill="#22c55e" opacity=".48"/>
+  </g>
+  <g class="node node-c">
+    <circle cx="690" cy="398" r="5" fill="#38bdf8" opacity=".58"/>
+    <circle cx="940" cy="402" r="4" fill="#22c55e" opacity=".56"/>
+    <circle cx="1098" cy="480" r="7" fill="#22d3ee" opacity=".52"/>
+  </g>
+
+  <rect class="scanlines" width="1200" height="720" fill="url(#scan)" opacity=".35"/>
+
+  <g transform="translate(64 62)">
+    <text class="mono cyan" x="0" y="0" font-size="18" font-weight="800" letter-spacing="4">PUBLIC ENGINEERING PROFILE</text>
+    <text class="mono" x="0" y="118" font-size="122" font-weight="900" letter-spacing="-9" fill="#f8fafc">crubicle</text>
+    <text class="mono" x="0" y="226" font-size="122" font-weight="900" letter-spacing="-9" fill="#f8fafc">owner</text>
+    <text class="sans muted" x="0" y="304" font-size="31" font-weight="700">AI-assisted QA and systems builder. Turning unclear ideas into</text>
+    <text class="sans muted" x="0" y="344" font-size="31" font-weight="700">runnable slices, visible state, testable behavior, docs, reports,</text>
+    <text class="sans muted" x="0" y="384" font-size="31" font-weight="700">and reproducible cases.</text>
+  </g>
+
+  <g transform="translate(694 60)">
+    <rect width="442" height="204" rx="22" fill="#020617" opacity=".82" stroke="#22c55e" stroke-opacity=".34"/>
+    <circle cx="31" cy="29" r="7" fill="#ef4444"/>
+    <circle cx="52" cy="29" r="7" fill="#f59e0b"/>
+    <circle cx="73" cy="29" r="7" fill="#22c55e"/>
+    <text class="mono terminal-text" x="26" y="76"><tspan fill="#64748b">$</tspan><tspan fill="#bbf7d0"> whoami</tspan><tspan class="cursor" fill="#22d3ee">_</tspan></text>
+    <text class="mono terminal-text green" x="26" y="112">QA + systems</text>
+    <text class="mono terminal-text" x="26" y="148"><tspan class="blue">Python</tspan><tspan fill="#bbf7d0"> / pytest</tspan></text>
+    <text class="mono terminal-text" x="26" y="184"><tspan class="blue">Docs</tspan><tspan fill="#bbf7d0"> / reports</tspan></text>
+  </g>
+
+  <g transform="translate(64 487)">
+    <g>
+      <rect x="0" y="0" width="102" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="51" y="34" fill="#dbeafe" text-anchor="middle">Python</text>
+    </g>
+    <g transform="translate(116 0)">
+      <rect x="0" y="0" width="96" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="48" y="34" fill="#dbeafe" text-anchor="middle">pytest</text>
+    </g>
+    <g transform="translate(226 0)">
+      <rect x="0" y="0" width="122" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="61" y="34" fill="#dbeafe" text-anchor="middle">DevTools</text>
+    </g>
+    <g transform="translate(362 0)">
+      <rect x="0" y="0" width="78" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="39" y="34" fill="#dbeafe" text-anchor="middle">SQL</text>
+    </g>
+    <g transform="translate(454 0)">
+      <rect x="0" y="0" width="112" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="56" y="34" fill="#dbeafe" text-anchor="middle">Docker</text>
+    </g>
+    <g transform="translate(580 0)">
+      <rect x="0" y="0" width="138" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="69" y="34" fill="#dbeafe" text-anchor="middle">Playwright</text>
+    </g>
+    <g transform="translate(732 0)">
+      <rect x="0" y="0" width="104" height="52" rx="26" fill="#0f172a" fill-opacity=".76" stroke="#93c5fd" stroke-opacity=".34"/>
+      <text class="sans chip-text" x="52" y="34" fill="#dbeafe" text-anchor="middle">GitHub</text>
+    </g>
+  </g>
+
+  <g transform="translate(64 568)">
+    <g>
+      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">01</text>
+      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Manual QA</text>
+      <text class="sans proof-copy soft" x="20" y="100">smoke, regression, exploratory</text>
+      <rect class="bar-fill" x="20" y="110" width="216" height="4" rx="2" fill="#22d3ee"/>
+    </g>
+    <g transform="translate(272 0)">
+      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">02</text>
+      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Automation</text>
+      <text class="sans proof-copy soft" x="20" y="100">pytest / Playwright-oriented</text>
+      <rect class="bar-fill delay-1" x="20" y="110" width="216" height="4" rx="2" fill="#22c55e"/>
+    </g>
+    <g transform="translate(544 0)">
+      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">03</text>
+      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Systems</text>
+      <text class="sans proof-copy soft" x="20" y="100">BulbOpt, MixApp, VPN</text>
+      <rect class="bar-fill delay-2" x="20" y="110" width="216" height="4" rx="2" fill="#22d3ee"/>
+    </g>
+    <g transform="translate(816 0)">
+      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">04</text>
+      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Artifacts</text>
+      <text class="sans proof-copy soft" x="20" y="100">README, docs, reports</text>
+      <rect class="bar-fill delay-3" x="20" y="110" width="216" height="4" rx="2" fill="#22c55e"/>
+    </g>
+  </g>
+</svg>
