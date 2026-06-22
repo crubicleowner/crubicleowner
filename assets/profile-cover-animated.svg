@@ -38,7 +38,7 @@
       .terminal-text { font-size: 22px; font-weight: 700; }
       .chip-text { font-size: 22px; font-weight: 650; }
       .proof-title { font-size: 25px; font-weight: 800; }
-      .proof-copy { font-size: 18px; font-weight: 550; }
+      .proof-copy { font-size: 16px; font-weight: 600; }
       .grid-lines {
         animation: driftGrid 9s linear infinite;
         transform-origin: 700px 360px;
@@ -182,34 +182,38 @@
     </g>
   </g>
 
-  <g transform="translate(64 568)">
+  <g transform="translate(64 552)">
     <g>
-      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
-      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">01</text>
-      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Manual QA</text>
-      <text class="sans proof-copy soft" x="20" y="100">smoke, regression, exploratory</text>
-      <rect class="bar-fill" x="20" y="110" width="216" height="4" rx="2" fill="#22d3ee"/>
+      <rect width="256" height="132" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="34" font-size="18" font-weight="800">01</text>
+      <text class="sans proof-title" x="20" y="68" fill="#f8fafc">Manual QA</text>
+      <text class="sans proof-copy soft" x="20" y="94">smoke / regression</text>
+      <text class="sans proof-copy soft" x="20" y="114">exploratory checks</text>
+      <rect class="bar-fill" x="20" y="122" width="216" height="4" rx="2" fill="#22d3ee"/>
     </g>
     <g transform="translate(272 0)">
-      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
-      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">02</text>
-      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Automation</text>
-      <text class="sans proof-copy soft" x="20" y="100">pytest / Playwright-oriented</text>
-      <rect class="bar-fill delay-1" x="20" y="110" width="216" height="4" rx="2" fill="#22c55e"/>
+      <rect width="256" height="132" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="34" font-size="18" font-weight="800">02</text>
+      <text class="sans proof-title" x="20" y="68" fill="#f8fafc">Automation</text>
+      <text class="sans proof-copy soft" x="20" y="94">pytest scenarios</text>
+      <text class="sans proof-copy soft" x="20" y="114">Playwright checks</text>
+      <rect class="bar-fill delay-1" x="20" y="122" width="216" height="4" rx="2" fill="#22c55e"/>
     </g>
     <g transform="translate(544 0)">
-      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
-      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">03</text>
-      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Systems</text>
-      <text class="sans proof-copy soft" x="20" y="100">BulbOpt, MixApp, VPN</text>
-      <rect class="bar-fill delay-2" x="20" y="110" width="216" height="4" rx="2" fill="#22d3ee"/>
+      <rect width="256" height="132" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="34" font-size="18" font-weight="800">03</text>
+      <text class="sans proof-title" x="20" y="68" fill="#f8fafc">Systems</text>
+      <text class="sans proof-copy soft" x="20" y="94">BulbOpt / MixApp</text>
+      <text class="sans proof-copy soft" x="20" y="114">VPN prototype</text>
+      <rect class="bar-fill delay-2" x="20" y="122" width="216" height="4" rx="2" fill="#22d3ee"/>
     </g>
     <g transform="translate(816 0)">
-      <rect width="256" height="118" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
-      <text class="mono cyan" x="20" y="36" font-size="18" font-weight="800">04</text>
-      <text class="sans proof-title" x="20" y="72" fill="#f8fafc">Artifacts</text>
-      <text class="sans proof-copy soft" x="20" y="100">README, docs, reports</text>
-      <rect class="bar-fill delay-3" x="20" y="110" width="216" height="4" rx="2" fill="#22c55e"/>
+      <rect width="256" height="132" rx="20" fill="#020617" fill-opacity=".7" stroke="#7dd3fc" stroke-opacity=".28"/>
+      <text class="mono cyan" x="20" y="34" font-size="18" font-weight="800">04</text>
+      <text class="sans proof-title" x="20" y="68" fill="#f8fafc">Artifacts</text>
+      <text class="sans proof-copy soft" x="20" y="94">README / docs</text>
+      <text class="sans proof-copy soft" x="20" y="114">reports</text>
+      <rect class="bar-fill delay-3" x="20" y="122" width="216" height="4" rx="2" fill="#22c55e"/>
     </g>
   </g>
 </svg>
